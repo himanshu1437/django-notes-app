@@ -28,7 +28,7 @@ pipeline{
             steps{
                 script{
                 docker_push("notes-app","latest","himanshu52758")
-                }
+                } 
             }
         }
         stage("Deploy"){
