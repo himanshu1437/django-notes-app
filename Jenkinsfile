@@ -24,14 +24,14 @@ pipeline{
                 }
             }
         }
-        stage("Push to DockerHub"){
+        stage("Code Push to DockerHub"){
             steps{
                 script{
                 docker_push("notes-app","latest","himanshu52758")
                 } 
             }
         }
-        stage("Deploy"){
+        stage("Code Deploy"){
             steps{
                 echo "This is Deploying The Code"
                 sh "docker compose up -d && docker compose up -d"
